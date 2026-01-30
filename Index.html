@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Team Checker</title>
+</head>
+<style>
+    body {
+        align-items: center;
+        justify-content: center;
+    }
+    h1 {
+        text-align: center;
+        font-size: 50px;
+        font-weight: bold;
+        padding: 30px;
+    }
+    .finder {
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+        width: 950px;
+        height: 700px;
+        margin-bottom: 100px;
+        background-color: white;
+        margin-left: 287px;
+        margin-right: 200px;
+    }  
+    p{
+        text-align: left;
+        font-size: 25px;
+    } 
+    h2 {
+        text-align: center;
+    }
+    label {
+        margin-right: 18px; /*   space between Yes and No */
+        font-size: 21px;
+    }
+    select {
+        width: 100px;
+        border-radius: 20px;
+        text-align: center;
+        border: 1px black solid;
+    }
+    #Output{
+        font-size: 15px;
+        text-align: center;
+    }
+</style>
+<body>
+    <h1>Find Your OBMC Intramurals Team Here!</h1>
+    <div class="finder">
+        <h2>Fill out Info to find your Intramurals Team</h2>
+        <br>
+        <br>
+        <p>Did you finish the registration?</p>
+        <input type="radio" name="regi" value="Yes"> <label>Yes</label>
+        <input type="radio" name="regi" value="No"> <label>No</label>
+        <br>
+        <br>
+        <p>Do you have medical clearance?</p>
+        <input type="radio" name="medi" value="Yes"> <label>Yes</label>
+        <input type="radio" name="medi" value="No"> <label>No</label>
+        <br>
+        <br>
+        <label for="secgr">Grade Level and Section</label>
+        <br>
+        <br>
+        <select name="gr" id="gr">
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+        <select name="sec" id="sec">
+            <option value="Sap">Sapphire</option>
+            <option value="Ruby">Ruby</option>
+            <option value="Top">Topaz</option>
+            <option value="Eme">Emerald</option>
+            <option value="Jade">Jade</option>
+        </select>
+        <br>
+        <br>
+        <button type="button" class="btn btn-success mt-3" py-click="check_team">
+            Check team
+        </button>
+        <br>
+        <br>
+        <h2>Your team is:</h2>
+        <br>
+        <br>
+        <div id="Output"></div>
+        <script type="py" src="main.py"></script>
+    </div>
+</body>
+</html>
